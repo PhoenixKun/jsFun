@@ -1,3 +1,4 @@
+<title>My first Js</title>
 <!-- Helpful resources for this assignment: -->
 <!-- https://www.w3schools.com/js/js_htmldom.asp -->
 <!-- https://www.w3schools.com/js/js_htmldom_html.asp -->
@@ -57,7 +58,7 @@ JavaScript can create new HTML events in the page -->
   <br>
   <br>
 	<!-- Why should we only use document.write for testing? Using document.write() after an HTML document is fully loaded will delete all existing HTML!-->
-	<button onclick="document.write('Tyree 17')">Push me to delete everything but the number thirteen</button>
+	<button onclick="document.write('Tyree 17')">Push me to delete everything but Me</button>
 
 	<!-- OH NOES! Better reload the browser! But First:-->
 
@@ -113,17 +114,21 @@ JavaScript can create new HTML events in the page -->
 
 	<!-- Uncomment the following three lines of code (using the command + / keys) to see how to make an alert pop up! -->
 
-<!-- <script>
+<!--
+ <script>
 window.alert(5 + 6);
 </script>
 -->
+
 
 <!-- TO DO: Make "Hi! My name is" + your name appear in an alert from the page. 
 	***HINT: Remember, Javascript can only parse words when they are in 'string' format...d even punctuation (like quotation marks) must be inside of single quotes!!!***-->
 
 	<!-- YOUR CODE GOES HERE!  -->
 
-
+<script>
+window.alert('Hi my name is Phoenix');
+</script>
 
 	<!-- BACK TO THE ASSIGNMENT!  -->
   <br>
@@ -143,11 +148,13 @@ window.alert(5 + 6);
 
  <img id="image" src="images/smiley.gif" width="160" height="120">
 
-<!-- <script>
+<!--
+ <script>
 document.getElementById("image").src = "images/landscape.jpg";
 </script>
+-->
 
-<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> -->
+<p>The original image was smiley.gif, but the script changed it to landscape.jpg</p> 
 <br>
 <br>
 
@@ -176,9 +183,13 @@ Find two images, and make your own picture switcher below
 -->
 
 <!-- YOUR CODE GOES HERE!  -->
-
-
-
+<script>
+    var Savage = function() {
+        document.getElementById('phoenix').src = 'phoenix-300x262.jpg';
+    };
+    </script>
+<img id="phoenix" src="1ebfa119e07f327f0e29843dd413f906.jpg" width="160" height="120">
+<p><input type="button" id="phoenix" value="click me to see awesomeness" onclick=Savage()></p>
 <!-- BACK TO THE ASSIGNMENT!  -->
 
 <h3>Making a Picture Flipper with HTML and JS</h3>
@@ -217,8 +228,17 @@ Find some images, and make your own picture flipper below.
 -->
 
 <!-- YOUR CODE GOES HERE!  -->
-
-
+<script>
+var stuff = ['phoenix-300x262.jpg', 'U40tBPcj.jpeg', 'rendition1.img.jpg', 'w3Wim0c.jpg', 'Blog-OB40-Tyra-PatchNotes.jpg', 'Maeve-main.jpg', 'mei misaki.jpg' ];
+var God = 0;
+var Life = function () {
+    var img = document.getElementById('phoenixGod');
+    God = ++God % 7;
+    img.src = stuff[God];
+};
+    </script>
+<img id='phoenixGod' src="1ebfa119e07f327f0e29843dd413f906.jpg" width="400" height="300">
+<p><input type="button" id='button3' value="I Have Goddies Press Me" onclick=Life()></p>
 
 <!-- CONGRATULATIONS! YOU'VE REACHED THE END OF THE ASSIGNMENT! Don't forget to commit your code! -->
 
